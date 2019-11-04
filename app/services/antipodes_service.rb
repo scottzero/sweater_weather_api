@@ -4,7 +4,6 @@ class AntipodesService
   end
 
   def format_coords
-    binding.pry
     "#{@coordinates[:lat]},#{@coordinates[:lng]}"
   end
 

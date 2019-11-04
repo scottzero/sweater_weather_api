@@ -21,7 +21,6 @@ class ReverseLookupService
   end
 
   def parsed_google_geocode_data
-    binding.pry
     #parse our response data
     JSON.parse(google_geocode_response.body, symbolize_names: true)
   end

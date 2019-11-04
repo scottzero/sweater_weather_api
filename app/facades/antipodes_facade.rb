@@ -21,6 +21,11 @@ class AntipodesFacade
     current_antipode_forecast = darksky_service.parsed_darksky_response_data
     reverse_look = ReverseLookupService.new(current_antipode_forecast)
     antipode_city = reverse_look.parsed_google_geocode_data
-    binding.pry
+    antipode_name_data = antipode_city[:results][0][:formatted_address].split(",")
+    antipode_name = antipode_name_data[1] + "," + antipode_name_data[2]
+    forecast_summary = current_antipode_forecast[:currently][:summary]
+    antipode_temp = current_antipode_forecast[:currently].values[6]
+    AntipodesPoro.new(antipode_name, "antipode",forecast_summary,antipode_temp)
+    # binding.pry
   end
 end
