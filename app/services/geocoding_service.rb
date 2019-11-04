@@ -25,6 +25,7 @@ class GeocodingService
   end
 
   def lat_long_coords
+    # binding.pry
     parsed_google_geocode_data[:results][0][:geometry][:location]
     #returns => {:lat=>39.7392358, :lng=>-104.990251}
   end

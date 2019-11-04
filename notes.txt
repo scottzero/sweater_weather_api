@@ -1,4 +1,4 @@
-app data flow
+app data flow [spec,endpoint,controller, service, facade]
 1. we have a location that needs to get geocoded
 2. once its geocoded by google geocode api we will have lat & long values(geocodeservice)
 3. we need the lat & long values to be passed into the darksky api request

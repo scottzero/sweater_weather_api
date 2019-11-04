@@ -2,7 +2,7 @@ class DailyWeatherPoro
   attr_reader :time, :summary, :icon, :tempurature_high, :tempurature_low
 
   def initialize(data)
-    binding.pry
+    # binding.pry
     @time = data[:time]
     @summary = data[:summary]
     @icon = data[:icon]

@@ -8,6 +8,7 @@ class PresenterFacade
   def google_geocode
     geocode_access = GeocodingService.new(location)
     send_me_to_darksky = geocode_access.lat_long_coords
+    binding.pry
   end
   #pass in our lat and long from google_geocode method
   def darksky
