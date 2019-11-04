@@ -18,4 +18,8 @@ class PresenterFacade
   def current_weather
     CurrentWeatherPoro.new(darksky[:currently])
   end
+  #method responsible for current daily data only
+  def daily_weather
+    DailyWeatherPoro.new(darksky[:daily])
+  end
 end
