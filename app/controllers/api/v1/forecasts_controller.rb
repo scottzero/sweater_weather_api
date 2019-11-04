@@ -9,6 +9,8 @@ class Api::V1::ForecastsController < ApplicationController
     geocoded_location = geocode_me.parsed_google_geocode_data
     #location latitude and longitude
     lat_long_coords = geocode_me.lat_long_coords
+    #get weather using darksky api
+    weather = DarkskyService.new(lat_long_coords)
   end
 
 end

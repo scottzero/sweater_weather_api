@@ -1,7 +1,8 @@
 class DarkskyService
   #intialize this class with coordinates passed in
   def initialize(coords)
-    @coords = coords
+    @lat = coords[:lat]
+    @lng = coords[:lng]
   end
 
   #connect to darksky api
@@ -13,11 +14,11 @@ class DarkskyService
 
   #pass query params to connect darksky
   def darksky_response
-    connect_darksky.get("/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{@coords}")
+    connect_darksky.get("/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{@lat},#{@lng}")
   end
 
   #parse the response data from darksky api
   def parsed_darksky_response_data
-    JSON.parse(darksky_response, symbolize_names: true)
+    JSON.parse(darksky_response.body, symbolize_names: true)
   end
 end
