@@ -11,6 +11,7 @@ class Api::V1::ForecastsController < ApplicationController
     lat_long_coords = geocode_me.lat_long_coords
     #get weather using darksky api
     weather = DarkskyService.new(lat_long_coords)
+    # binding.pry
   end
 
 end
