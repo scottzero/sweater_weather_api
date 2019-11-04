@@ -1,5 +1,4 @@
 class GeocodingService
-
   attr_reader :location
 
   def initialize(location)
@@ -25,7 +24,7 @@ class GeocodingService
     JSON.parse(google_geocode_response.body, symbolize_names: true)
   end
 
-  def google_geocode_coords
+  def lat_long_coords
     parsed_google_geocode_data[:results][0][:geometry][:location]
     #returns => {:lat=>39.7392358, :lng=>-104.990251}
   end
