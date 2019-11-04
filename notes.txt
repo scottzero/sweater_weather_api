@@ -1,0 +1,6 @@
+app data flow
+1. we have a location that needs to get geocoded
+2. once its geocoded by google geocode api we will have lat & long values
+3. we need the lat & long values to be passed into the darksky api request
+4. this will get us weather data for our location
+...
