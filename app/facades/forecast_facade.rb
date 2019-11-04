@@ -14,7 +14,13 @@ class ForecastFacade
   end
 
   def google_geocode_response
+    #get our response
     google_geo_conn.get("/maps/api/geocode/json?address=#{location}&key=#{ENV['GOOGLE_GEOCODE_API_KEY']}")
+  end
+
+  def parse_google_geocode_data
+    #parse our response data
+    JSON.parse(google_geocode_response.body, symbolize_names: true)
   end
 
 end
