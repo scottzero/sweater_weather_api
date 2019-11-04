@@ -1,11 +1,12 @@
 class Api::V1::ForecastsController < ApplicationController
 
   def show
-    # binding.pry
-    weather = ForecastFacade.new(params[:location])
-    #test :location params should be denver,co
-    # weather.google_geocode_response
-    binding.pry
+    #need location
+    location = params[:location]
+    #location needs to be geocoded
+    geocode_me = GeocodingService.new(location)
+    #get data back from geocode service
+    geocoded_location = geocode_me.parsed_google_geocode_data
   end
 
 end
