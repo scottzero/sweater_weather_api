@@ -1,5 +1,4 @@
 class AntipodesSerializer
-  def initialize(data)
-    @data = data
-  end
+  include FastJsonapi::ObjectSerializer
+  attributes :id, :name, :type, :summary, :temp
 end

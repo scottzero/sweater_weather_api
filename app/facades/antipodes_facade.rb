@@ -26,6 +26,5 @@ class AntipodesFacade
     forecast_summary = current_antipode_forecast[:currently][:summary]
     antipode_temp = current_antipode_forecast[:currently].values[6]
     AntipodesPoro.new(antipode_name, "antipode",forecast_summary,antipode_temp)
-    # binding.pry
   end
 end
