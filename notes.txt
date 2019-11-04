@@ -3,5 +3,16 @@ app data flow
 2. once its geocoded by google geocode api we will have lat & long values(geocodeservice)
 3. we need the lat & long values to be passed into the darksky api request
 4. this will get us weather data for our location(darksky service)
-5. 
+5. now that we have weather data for our location from the darksky api service
+we need to make a poro to get the data out that we want.
+according to the mockup, we need to get data from
+our :currently, :hourly and :daily keys in our darksky return data.
+
+:currently poro
+:hourly poro
+:daily poro
+and we need a presenter to delegate getting this data and presenting it.
+
+
+parsed_darksky_response_data (is the method to initialize these poros)
 ...
