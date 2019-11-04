@@ -16,3 +16,20 @@ and we need a presenter to delegate getting this data and presenting it.
 
 parsed_darksky_response_data (is the method to initialize these poros)
 ...
+
+
+
+[final]
+find the antipode for hong kong
+create, spec
+create endpoint api/v1/antipode?location?hong_kong
+antipode : api_key (must go in header)
+api key: oscar_the_grouch
+  1.get lat long for hong kong (geocode_api)
+  2. find its antipode, (this will return lat long)
+  3. find current weather info for antipode city(darksky)
+  4. lookup the name of the antipode city, using the lat and long
+create controller
+create service
+create facade
+create serializer to render data
