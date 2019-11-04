@@ -16,7 +16,8 @@ class AntipodesService
   end
 
   def antipode_response
-    antipode_conn.get("/api/v1/antipodes?lat=#{@coordinates[:lat]}&long=#{@coordinates[:lng]}")
+    x = antipode_conn.get("/api/v1/antipodes?lat=#{@coordinates[:lat]}&long=#{@coordinates[:lng]}")
+    JSON.parse(x.body, symbolize_names: true)
   end
 
 end

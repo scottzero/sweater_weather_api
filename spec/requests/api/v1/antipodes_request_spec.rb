@@ -9,7 +9,6 @@ RSpec.describe "antipode api endpoint" do
     city = "hongkong"
     get "/api/v1/antipode?loc=#{city}"
     expect(response).to be_successful
-    # binding.pry
     parsed_response = JSON.parse(response.body, symbolize_names: true)
     expect(parsed_response[:data]).to be_present
     expect(parsed_response[:data].class).to eq(Hash)
