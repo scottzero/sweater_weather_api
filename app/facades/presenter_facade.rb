@@ -20,4 +20,11 @@ class PresenterFacade
     daily_data = weather_data[:daily]
     ForecastHandlerPoro.new(@location,current_data,hourly_data,daily_data)
   end
+
+  def get_img(location)
+    #service with method to connect
+    flickr_service = FlickrService.new
+    flickr_service.get_my_img
+    #facade methods to parse data once connected
+  end
 end
