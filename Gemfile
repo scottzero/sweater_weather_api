@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 #Add custom Gems
-gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'fast_jsonapi'
 gem 'figaro'
