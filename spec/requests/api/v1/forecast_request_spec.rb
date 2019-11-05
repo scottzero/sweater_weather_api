@@ -7,5 +7,10 @@ RSpec.describe "Consuming forcast api endpoint" do
     get "/api/v1/forecast?location=#{city_state}"
 
     expect(response).to be_successful
+    forecast_data = JSON.parse(response.body)
+    expect(forecast_data["data"]["id"]).to eq("1")
+    expect(forecast_data["data"]["type"]).to eq("forecast")
+    expect(forecast_data["data"]["attributes"]["id"]).to eq(1)
+    expect(forecast_data["data"]["attributes"]["location"]).to eq("#{city_state}")
   end
 end
