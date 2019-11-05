@@ -20,7 +20,13 @@ Forecast data [complete]
 background img data [complete]
 user data [wip]
 1.create user relation to store user data [done]
-2.create user model
+2.create user model[done]
+3.post user create endpoint[done]
+4.user create controller
+
+
+
+
 -users controller
 -sessions controller
 -endpoints for user
