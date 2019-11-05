@@ -19,7 +19,8 @@ parsed_darksky_response_data (is the method to initialize these poros)
 Forecast data [complete]
 background img data [complete]
 user data [wip]
-1.create user relation to store user data 
+1.create user relation to store user data [done]
+2.create user model
 -users controller
 -sessions controller
 -endpoints for user
