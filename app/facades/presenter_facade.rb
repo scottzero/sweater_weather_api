@@ -18,5 +18,6 @@ class PresenterFacade
     hourly_data = weather_data[:hourly]
     daily_data = weather_data[:daily]
     ForecastHandlerPoro.new(@location,current_data,hourly_data,daily_data)
+    binding.pry
   end
 end
