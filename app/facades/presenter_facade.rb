@@ -24,7 +24,8 @@ class PresenterFacade
   def get_img(location)
     #service with method to connect
     flickr_service = FlickrService.new
-    flickr_service.img_data(location)
+    img_data = flickr_service.img_data(location)
+    BackgroundPoro.new(img_data)
     #facade methods to parse data once connected
   end
 end
