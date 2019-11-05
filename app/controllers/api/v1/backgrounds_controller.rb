@@ -1,4 +1,4 @@
-class Api::V1::BackgoundsController < AppicationController
+class Api::V1::BackgroundsController < ApplicationController
 
   def show
     background_data = PresenterFacade.new(params[:location])
