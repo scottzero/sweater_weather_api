@@ -8,6 +8,4 @@ class User < AppicationRecord
     #this will gen a random hex string
     self.update(api_key: SecureRandom.hex)
   end
-
-
 end
