@@ -7,5 +7,8 @@ RSpec.describe "Use the flikr api" do
     get "/api/v1/backgrounds?location=#{city_state}"
 
     expect(response).to be_successful
+    img_data = JSON.parse(response.body)
+    expect(img_data["data"].class).to eq(Hash)
+    expect(img_data["data"]["attributes"].keys).to eq(["id", "url"])
   end
 end
