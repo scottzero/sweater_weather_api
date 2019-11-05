@@ -16,3 +16,12 @@ and we need a presenter to delegate getting this data and presenting it.
 
 parsed_darksky_response_data (is the method to initialize these poros)
 ...
+Forecast data [complete]
+background img data [complete]
+user data [wip]
+-users controller
+-sessions controller
+-endpoints for user
+-model for user
+-specs for each
+-poro for session
