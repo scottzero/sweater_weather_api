@@ -1,4 +1,4 @@
-class User < AppicationRecord
+class User < ApplicationRecord
   has_secure_password
   validates :email, uniqueness: true
   after_create :gen_user_api_key
