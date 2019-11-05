@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
       #test user creation, success!!
       #unique email works!! , tested in postman
     else
-      render json: {error: "no user found"}, status: 404
+      render json: {error: "email is not unique or password is not consistent"}, status: 404
       #working but need a user.
     end
   end
