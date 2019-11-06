@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-  #http://localhost:3000/api/v1/users?email=scp@gmail.com&password=hello&password_confirmation=hello
   def create
     user = User.new(user_params)
     if user.save
@@ -14,3 +13,4 @@ class Api::V1::UsersController < ApplicationController
       params.permit(:email, :password, :password_confirmation)
     end
 end
+#http://localhost:3000/api/v1/users?email=scp@gmail.com&password=hello&password_confirmation=hello
