@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": "1",
+        "type": "forecast",
+        "attributes": {
+            "id": 1,
+            "location": "denver,co",
+            "current_data": {
+                "current_weather": 1573012433,
+                "summary": "Clear",
+                "icon": "clear-night",
+                "temperature": 44.06,
+                "humidity": 0.56,
+                "uvindex": null,
+                "visibility": 10,
+                "feelsLike": 41.69
+            },
+            "hourly_data": {
+                "1573009200": 45.67,
+                "1573012800": 42.04,
+                "1573016400": 40.32
+            }
+        }
+    }
+}

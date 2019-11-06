@@ -6,7 +6,6 @@ class ForecastHandlerPoro
               :daily_data
 
   def initialize(location,current_weather,hourly_weather,daily_weather)
-    binding.pry
     @id = 1
     @location = location
     @current_weather = current_weather
