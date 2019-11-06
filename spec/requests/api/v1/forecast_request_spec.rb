@@ -1,16 +1,9 @@
 require "rails_helper"
 
 RSpec.describe "Consuming forcast api endpoint" do
-  it "returns the weather forecast for a specific city" do
-    city_state = "denver,co"
-
-    get "/api/v1/forecast?location=#{city_state}"
-
-    expect(response).to be_successful
-    forecast_data = JSON.parse(response.body)
-    expect(forecast_data["data"]["id"]).to eq("1")
-    expect(forecast_data["data"]["type"]).to eq("forecast")
-    expect(forecast_data["data"]["attributes"]["id"]).to eq(1)
-    expect(forecast_data["data"]["attributes"]["location"]).to eq("#{city_state}")
+  it "returns the weather forecast data for a specific city" do
+    json_response =  File.open("./app/fixtures/forecast_denver_api_call.json")
+    WebMock.stub_request(:get, 'http://localhost:3000/api/v1/forecast?location=denver,co').
+    to_return(status: 200, body: json_response)
   end
 end
